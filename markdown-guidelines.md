@@ -70,7 +70,7 @@ Core Guidelines
 
 Short and familiar.
 
-# Use `%` for commenting (non-md)
+## Use `%` for commenting (non-md)
 
 A comment must start on column 1.
 
