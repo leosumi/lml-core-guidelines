@@ -51,3 +51,85 @@ This will allow to notably create:
 * an ebook
 * a slide presentation
 * a web page
+
+# G: General
+
+## Use UTF-8 file encoding
+
+### Reason
+
+Core Guidelines
+
+### Remark
+
+* Check your text editor.
+
+## Use the `.md` file extension
+
+### Reason
+
+Short and familiar.
+
+# Use `%` for commenting (non-md)
+
+A comment must start on column 1.
+
+### Reason
+
+Markdown syntax do not provide a way for commenting.
+The `%` is a good choice because it is not used by Gruber's markdown.
+It is also familiar for LaTeX users.
+
+Having comments starting on column 1 avoid the confusion between the start of a comment and the percent symbol.
+It makes also a file easy to parse to remove comments.
+
+Pandoc use the `%` symbol in its syntax, but this functionnality is easily replaceable by another syntax.
+
+### Remark
+
+* Comments must start on column 1.
+* Use a space after `%`.
+
+### Example
+
+```
+% This is a comment
+```
+
+## Use a YAML block to store metadata (Pandoc)
+
+### Reason
+
+The YAML block can store more information and without ambiguity compare to the `%` block.
+Also, the `%` symbol can be used for commenting.
+
+### Remark
+
+* Follow the YAML specification.
+* Do not use `%` for the metadata block
+
+### Example
+
+```
+---
+title: Awesome Title
+author: John Smith
+date: March 2020
+...
+```
+
+### Example, bad
+
+```
+---
+title: Awesome Title
+author: John Smith
+date: March 2020
+---
+```
+
+```
+% Awesome Title
+% John Smith
+% March 2020
+```
